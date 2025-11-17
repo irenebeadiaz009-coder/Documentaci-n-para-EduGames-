@@ -1,7 +1,7 @@
 #Sumas y restas, con arreglos 
 
 #El juego fue modificado para que la dificultad sea conforme a la edad del pequeño
-#Ahora se tiene un sub seccion dentro del juego, ya que dentro del rango de 5 a 10 años hay diferentes niveles de conocimiento
+#Ahora se tiene un sub-seccion dentro del juego, ya que dentro del rango de 5 a 10 años hay diferentes niveles de conocimiento
 
 print("Bienvenido a sumas y restas 🧠 💪 💫")  
 puntos=0
@@ -76,6 +76,8 @@ if puntos >=20:
         print(f"FELICIDADES 🎉🥳, obtuviste {puntos} puntos !!!")
 else:
         print(f"Siguelo intentando, obtuviste {puntos} puntos 💫") 
+
+
         
         
     

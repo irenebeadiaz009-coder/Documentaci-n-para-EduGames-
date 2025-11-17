@@ -1,6 +1,6 @@
 #Creemos la base del juego 
 
-print("¡Bienvenido a EduGames! 💖 🤓 🧠")
+print("¡Bienvenido a EduGames! 💖 🤓 🧠") 
 print("Aquí aprenderas mientras te diviertes. 🙌 😉") 
 
 nombre=input("Dinos como te llamas 😊: ")
@@ -10,10 +10,10 @@ edad=int(input("Cuantos años tienes? 🤓: "))
 
 if edad >=5 and edad <=10:
     print("Bienvenido al nivel basico 🐣 💫")
-    print(int(input("""Juegos disponibles:"
+    print(int(input("""Juegos disponibles:
                     "1. Colometría: aprenderas los colores y sus combinaciones 🎨 💖"
                     "2. Sumas y restas: aprende lo basico de las matematicas 🧠 💪"
-                    "3. Salir: """)))
+                    "3. Salir: """))) 
     
 #made by Regi and Ire
 elif edad >=11 and edad <=17:
