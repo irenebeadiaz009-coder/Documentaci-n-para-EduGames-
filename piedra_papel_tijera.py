@@ -1,4 +1,5 @@
 #EL juego piedra, papel o tigera
+#se le puede agregar un sistema de puntos 
 
 import random
 opciones=["piedra","papel","tijera"]

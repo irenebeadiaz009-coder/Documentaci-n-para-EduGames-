@@ -1,3 +1,6 @@
+#se le puede agregar un sistema de puntos 
+#se le puede agregar que de un solo pregunte 10 y que luego pregunte si quiere seguir jugando
+
 import random
 
 # Lista de preguntas con respuesta y pistas
