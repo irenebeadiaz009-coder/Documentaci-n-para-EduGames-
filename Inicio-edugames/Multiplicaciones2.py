@@ -2,7 +2,7 @@
 
 #Le hare una modificacion para que no vaya por diferentes rangos de edades sino que por nivel de dificultad 
 
-import random 
+import random #traemos datos aleatorios (se importan)
 
 print("Bienvenido a multiplicaciones 🧠 🏋️‍♀️")
 puntos=0
@@ -14,7 +14,7 @@ dificultad=int(input("""Que quieres jugar?
 
 if dificultad==1:
     for i in range(15): #se cambio a 15 preguntas para no hacer demasiadas multiplicaciones
-        num1=random.randint(2,12)
+        num1=random.randint(2,12) #se elijen numeros al azar de 2 a 12 
         num2=random.randint(2,12) 
         
         print(f"Cuanto es {num1}*{num2}?")

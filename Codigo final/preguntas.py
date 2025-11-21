@@ -1,7 +1,6 @@
 import random
 
 # Lista de preguntas con respuesta y pistas
-
 preguntas = [
     {
         "pregunta": "¿Cuál es el país más grande del mundo?",
@@ -65,7 +64,7 @@ preguntas = [
     },
     {
         "pregunta": "¿Quién pintó la Mona Lisa?",
-        "respuesta": "leonardo da vinci",
+        "respuesta": "leonardo da vinci|da vinci",
         "pistas": ["Fue inventor y artista italiano", "Vivió en el Renacimiento"]
     },
     {
@@ -105,43 +104,40 @@ preguntas = [
     }
 ]
 #print()
-
-#print("Bienvenido al juego de preguntas de cultura general! 🧐")
-def jugar():
-    puntaje = 0
+print("Bienvenido al juego de preguntas de cultura general! 🧐") #Esto se va a imprimir predeterminadamente
+def jugar(): #abrimos la funcion de "jugar", donde nos va a indicar todo lo que va a ir pasando en orden
+    puntaje = 0 #contador de puntos
     continuar = True
-
-    while continuar:
-        print("-")
-        print("-")
-        print("-")
-        pregunta = random.choice(preguntas)
+    preguntas_restantes = preguntas.copy() #Copia de trabajo para poder eliminar sin perder las preguntas originales
+    while continuar and len(preguntas_restantes) > 0: #Esto sucede si se continua el juego y hay más de cero preguntas en la copia de la lista
+        pregunta = random.choice(preguntas_restantes) #pregunta sorteada
+        preguntas_restantes.remove(pregunta) #la remueve de la lista
         print(f"Pregunta: {pregunta["pregunta"]} 🤔")
         
 
         intentos = 0
-        correcta = pregunta["respuesta"].lower()
+        correctas = pregunta["respuesta"].lower().split("|") #aqui el split me ayuda para tomar cualquier valor de los que estan separados por ese simbolo
 
         while intentos < 3:  # 1 intento inicial + 2 pistas
             respuesta = input("Tu respuesta: ").lower()
             print()
 
-            if respuesta == "salir":
+            if respuesta == "salir": #por si quiere salir antes de que se lo preguntemos directamente
                 continuar = False
                 break
 
-            if respuesta == correcta:
+            if respuesta in correctas:
                 print("Excelente! Sabes mucho 😎")
                 print()
                 puntaje += 1
                 break
             else:
                 if intentos < 2:
-                    print("Pista 🥶:", pregunta["pistas"][intentos])
+                    print("Pista 🥶:", pregunta["pistas"][intentos]) #para las pistas
                     
                 else:
                     print("Lo siento, las pistas e intentos para responder esta pregunta se acabaron 🤕.")
-                    print(f"La respuesta correcta era: {correcta} 👀")
+                    print(f"La respuesta correcta era: {correctas} 👀")
                     print()
                 intentos += 1
 
@@ -149,12 +145,28 @@ def jugar():
             break
         
         
-        if puntaje > 7:
-            salir = input("¿Deseas continuar jugando? (si/no): ").lower()
-            if salir != "si":
-                continuar = False
+        if len(preguntas_restantes) <= 5: #cuando ya lleve 15 preguntas hechas, se le pregunta si quiere seguir jugando o no
+            respuesta_valida = False
 
-    print("\nTu puntaje total fue:", puntaje)
-    print("Muchas gracias por haber jugado. Te esperamos pronto 📖.")
+            while not respuesta_valida:
+                salir = input("¿Deseas continuar jugando? (si/no): ").lower()
 
+                if salir == "si":
+                    continuar = True
+                    respuesta_valida = True
 
+                elif salir == "no":
+                    continuar = False
+                    respuesta_valida = True
+
+                else:
+                     print("Por favor ingresa una respuesta válida.")
+        if len(preguntas_restantes) == 0: #esto en caso de que se acaben todas las preguntas
+            print()
+            print("FELICIDADES")
+            print("Llegaste al final del juego.")
+            print()
+
+    print("Tu puntaje total fue:", puntaje)
+    print("Muchas gracias por haber jugado. Te esperamos pronto 📖.") #Mensaje predeterminado de despedida
+#jugar()

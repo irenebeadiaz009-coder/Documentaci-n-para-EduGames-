@@ -4,7 +4,7 @@ from colorimetria import colorimetria_funcion
 from sumasyrestas import sumasyrestas
 from piedra_papel_tijera import inicio
 from multiplicaciones import multiplicaciones
-from juego_preguntas import jugar
+from preguntas import jugar
 from adivinanzas import adivinanza1,adivinanza2,adivinanza3,adivinanza4,adivinanza5,salirdeljuego,adivinanza6,adivinanza7,adivinanza8,adivinanza9,adivinanza10,finaljuego
 
 print("¡Bienvenido a EduGames! 💖 🤓 🧠") 

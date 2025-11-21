@@ -1,4 +1,6 @@
-11#Este modulo será el menu 
+#Este modulo será el menu 
+
+#Importamos los archivos de los demas modulos 
 
 from colorimetria import colorimetria_funcion
 from sumasyrestas import sumasyrestas
@@ -7,15 +9,17 @@ from multiplicaciones import multiplicaciones
 from juego_preguntas import jugar
 from adivinanzas import adivinanza1,adivinanza2,adivinanza3,adivinanza4,adivinanza5,salirdeljuego,adivinanza6,adivinanza7,adivinanza8,adivinanza9,adivinanza10,finaljuego
 
+#Bienvenida al usuario
 print("¡Bienvenido a EduGames! 💖 🤓 🧠") 
 print("Aquí aprenderas mientras te diviertes. 🙌 😉") 
-        
+#Registro al usuario 
 nombre=input("Dinos como te llamas 😊: ")
 print(f"Hola {nombre}, listo/a para divertirte y aprender!! 💖🎉")
 
 
 edad=int(input("Cuantos años tienes? 🤓: "))
 
+#El menu empieza 
 def menu():
     while True: 
                

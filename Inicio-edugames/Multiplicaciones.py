@@ -59,7 +59,7 @@ if edad>=14 and edad <=17:
                 "io"
             else:
                 print(f"Gracias por jugar! 😊")
-                break
+                break #termina 
                         
 if puntos>=20:
     print(f"Excelente !!! alcanzaste el maximo puntaje, {puntos} puntos 🎉🎉")

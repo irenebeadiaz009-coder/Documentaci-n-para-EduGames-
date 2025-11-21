@@ -1,8 +1,11 @@
 #Creemos la base del juego 
 
+#Se le da la bienvenida al usuario
+
 print("¡Bienvenido a EduGames! 💖 🤓 🧠") 
 print("Aquí aprenderas mientras te diviertes. 🙌 😉") 
 
+#Se registra al usuario 
 nombre=input("Dinos como te llamas 😊: ")
 print(f"Hola {nombre}, listo/a para divertirte y aprender!! 💖🎉")
 

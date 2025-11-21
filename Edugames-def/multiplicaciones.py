@@ -9,7 +9,7 @@ def multiplicaciones():
 
     while True:
         puntos=0
-        contador=0 
+        contador=0 #Le ponemos esta opcion para ir contando cuangtas preguntas van al llegar a un cierto numero al usuario se le pregunta si desea seguir juagando o ya no
         
         dificultad=int(input(
             """Que quieres jugar?
@@ -81,7 +81,7 @@ def multiplicaciones():
                 """Quieres volver a jugar?
 1. Nivel basico: repasemos las tablas de multiplicacion 🧠
 2. Nivel avanzado: veamos que tanto sabes 💪 🤓 
-3. Salir: """))
+3. Salir: """)) #Se le agrego esto por si el usuario desea pasar a un nivel mas complicado o si desea jugar el mismo
             if seguir==1:
                 dificultad==1
                 break

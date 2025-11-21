@@ -46,7 +46,7 @@ elif edad >=8 and edad <=10:
         num1=random.randint(1,20)  
         num2=random.randint(1,20) 
         if num1<num2:
-            num1,num2=num2,num1
+            num1,num2=num2,num1 #Se le puso esto para que en las restas el numero que fuera de primero sea el mayor siempre asi evitar las repsuestas negativas 
         operacion=random.choice(["-", "+"])
         print(f"Cuanto es {num1} {operacion} {num2}?")
         
