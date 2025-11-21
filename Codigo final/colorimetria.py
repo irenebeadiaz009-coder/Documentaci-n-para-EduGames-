@@ -119,8 +119,8 @@ Por esto, comienza a practicar las combinaciones. 😉""")
                         answer = input("Escribe el nombre del nuevo color: ").lower()
                         if answer in ["naranja", "anaranjado"]:
                             print("Excelente, lo lograste. 🥹 🤗")
-                            prueba = False 
-                            combinaciones.remove(c_seleccionada) 
+                            prueba = False
+                            combinaciones.remove(c_seleccionada)
                         else:
                             print("Casi lo logras, buen intento.")
                             print("Vuelve a intentarlo. 💪")

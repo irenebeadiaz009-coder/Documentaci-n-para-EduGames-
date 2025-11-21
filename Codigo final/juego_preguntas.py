@@ -112,6 +112,9 @@ def jugar():
     continuar = True
 
     while continuar:
+        print("-")
+        print("-")
+        print("-")
         pregunta = random.choice(preguntas)
         print(f"Pregunta: {pregunta["pregunta"]} 🤔")
         

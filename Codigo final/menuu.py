@@ -1,4 +1,4 @@
-11#Este modulo será el menu 
+#Este modulo será el menu 
 
 from colorimetria import colorimetria_funcion
 from sumasyrestas import sumasyrestas
